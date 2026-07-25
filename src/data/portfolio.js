@@ -217,6 +217,83 @@ export const projects = [
     architecture:
       'Solidity smart contracts → IPFS for document storage → Web3 frontend → Oracle integration for legal verification → Audit trail on-chain.',
   },
+  {
+    id: 'ulconnect',
+    name: 'ULConnect',
+    status: 'Live',
+    statusColor: 'emerald',
+    stack: ['Flutter', 'Dart', 'Firebase', 'PWA'],
+    tagline: 'Your Gateway to University Life',
+    problem:
+      'Academic materials, communications, and social groups at the University of Liberia are fragmented across multiple platform services (like WhatsApp, external drives, or notice boards), causing confusion, information loss, and a lack of secure, campus-exclusive spaces.',
+    solution:
+      'ULConnect is a unified digital campus platform built to strengthen the University of Liberia student experience by centralizing course notes, facilitating peer networking, offering in-app collaboration chat, and keeping student data secure within a verified environment.',
+    features: [
+      'Academic Hub',
+      'Classmate Directory',
+      'Real-Time Chat',
+      'Verified Access',
+      'PWA Support',
+    ],
+    github: 'https://github.com/masonstephen',
+    liveDemo: 'https://www.ulconnect.app/',
+    challenges: [
+      'Designing a highly responsive and lightweight Progressive Web App using Flutter Web that performs reliably under low-bandwidth network environments.',
+      'Establishing a robust identity validation workflow restricting access strictly to active university students and administrators.',
+      'Developing an optimized real-time messaging pipeline capable of handling high-volume group communications on lower-end devices.',
+    ],
+    lessonsLearned: [
+      'Flutter Web enables quick cross-platform mobile-web deployment, but requires strategic asset caching and deferral to minimize load times.',
+      'Campus-only email domain checks significantly improve safety, accountability, and student trust.',
+      'Implementing offline-capable caching layers prevents UX frustration during frequent network cuts.',
+    ],
+    futureImprovements: [
+      'Offline-first synchronized downloader for course resources and syllabus notes.',
+      'Real-time campus alert notifications directly integrated with administrative notice boards.',
+      'Automatic enrollment synched directly to official class lists and schedules.',
+    ],
+    architecture:
+      'Flutter PWA client → Firebase Authentication → Firestore Real-time Database → Firebase Storage for academic resources → Security Rules.',
+  },
+  {
+    id: 'dataviz',
+    name: 'DataViz',
+    status: 'Live',
+    statusColor: 'emerald',
+    stack: ['React', 'Vite', 'Tailwind CSS', 'AI', 'JavaScript'],
+    tagline: 'Free AI-powered chart builder and dashboard editor',
+    problem:
+      'Business analysts, researchers, and students struggle to build quick, custom charts and dashboards from raw dataset uploads. Traditional tools have steep learning curves, while custom coding is slow and complex.',
+    solution:
+      'DataViz is an AI-powered chart builder that allows users to upload Excel/CSV data and write natural language instructions to auto-generate from 30+ interactive chart types. Dashboards can be customized and exported instantly as PDFs.',
+    features: [
+      'AI Chart Suggestion',
+      '30+ Interactive Chart Types',
+      'Dynamic Dashboard Grid',
+      'Flexible Exports (PNG/SVG/PDF)',
+      'CSV/Excel Uploads',
+      'Kaggle & HuggingFace Imports',
+    ],
+    github: 'https://github.com/masonstephen',
+    liveDemo: 'https://www.datavisual.app/',
+    challenges: [
+      'Engineering a rigid schema-driven AI parser translating arbitrary language queries into deterministic, renderable chart configurations.',
+      'Rendering multi-chart dashboard views with hundreds of thousands of data points smoothly without dropping frames.',
+      'Designing a secure client-side parsing pipeline ensuring sensitive user data remains locally in the browser and is never uploaded or exposed.',
+    ],
+    lessonsLearned: [
+      'Constraining AI outputs using predefined JSON formats guarantees predictable chart behavior.',
+      'Using client-side workers (e.g. PapaParse) handles heavy processing locally, enhancing speed and privacy.',
+      'SaaS monetizing through credits (integrated via Lemon Squeezy) works well with transparent, free-tier limitations.',
+    ],
+    futureImprovements: [
+      'Direct integrations with relational databases (MySQL, PostgreSQL, BigQuery).',
+      'Collaborative workspaces for sharing live dashboards with editing permissions.',
+      'Automated insights showing data anomalies and trend highlights.',
+    ],
+    architecture:
+      'React Web SPA (Vite) → Client-Side Charting Engine (ECharts/Recharts) → OpenAI/Gemini Serverless API → Lemon Squeezy Payment Webhooks.',
+  },
 ]
 
 export function getProjectById(id) {

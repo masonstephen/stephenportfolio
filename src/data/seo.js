@@ -18,6 +18,8 @@ export const siteConfig = {
     'LibTicket',
     'LibAI',
     'LibLand',
+    'ULConnect',
+    'DataViz',
     'Vue.js developer',
     'Full stack developer Kenya',
     'stephen-mason.tech',

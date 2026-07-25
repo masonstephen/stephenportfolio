@@ -9,6 +9,8 @@ const projects = [
   { id: 'libticket' },
   { id: 'libai' },
   { id: 'libland' },
+  { id: 'ulconnect' },
+  { id: 'dataviz' },
 ]
 
 const today = new Date().toISOString().split('T')[0]

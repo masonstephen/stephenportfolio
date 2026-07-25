@@ -161,6 +161,11 @@
     border-radius: 2px;
   }
 
+  .badge-success {
+    @apply inline-block bg-emerald-600 px-2 py-1 text-caption font-medium text-white;
+    border-radius: 2px;
+  }
+
   .status-badge {
     @apply inline-flex items-center px-2 py-1 text-caption font-medium;
     border-radius: 2px;

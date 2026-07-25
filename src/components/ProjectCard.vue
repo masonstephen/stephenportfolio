@@ -12,7 +12,7 @@ defineProps({
 const statusStyles = {
   amber: 'badge-primary',
   violet: 'badge-secondary',
-  emerald: 'badge-primary',
+  emerald: 'badge-success',
 }
 </script>
 
