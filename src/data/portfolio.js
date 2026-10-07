@@ -1,7 +1,12 @@
 export const personalInfo = {
   name: 'Stephen Mason',
-  title: 'Software Engineer',
-  headline: 'Building Digital Solutions for Africa.',
+  title: 'Software Engineer | AI & Data Science Researcher',
+  headline: 'Software Engineer | AI & Data Science Researcher',
+  roles: ['AI & Data Science Researcher', 'Software Engineer'],
+  statement:
+    'I build and study trustworthy AI systems for real-world environments, with a focus on retrieval-augmented generation, evidence-grounded question answering, data systems, and resource-constrained applications.',
+  supportingLine:
+    'Final-year Bachelor of Business Information Technology student at Strathmore University, researching curriculum-aware RAG for educational question answering.',
   subtitle:
     'Software Engineer specializing in Digital Products, Artificial Intelligence, Blockchain Technology, and Digital Innovation.',
   email: 'masonstephen606@gmail.com',
@@ -15,14 +20,31 @@ export const personalInfo = {
 }
 
 export const interests = [
-  'Digital Public Infrastructure',
-  'Artificial Intelligence',
-  'Blockchain',
-  'Software Architecture',
-  'Digital Transformation',
+  'Retrieval-Augmented Generation (RAG)',
+  'Trustworthy and Explainable AI',
+  'Large Language Model Evaluation',
+  'Information Retrieval',
+  'Evidence-Grounded Question Answering',
+  'Educational AI',
+  'Low-Resource / Resource-Constrained AI',
+  'Data Science and Machine Learning',
 ]
 
 export const experience = [
+  {
+    id: 'undergrad-research',
+    role: 'Undergraduate Information Systems Research',
+    company: 'Strathmore University',
+    period: 'Ongoing',
+    location: 'Nairobi, Kenya',
+    responsibilities: [
+      'Collaborative two-stage undergraduate research project conducted through IS Project I and IS Project II, supported by Research Methodology and Technical Writing.',
+      'Research focus: curriculum-aware retrieval-augmented generation for trustworthy educational question answering.',
+      'Designed the LibAI research project around curriculum knowledge organization, retrieval, evidence grounding, answerability, and evaluation.',
+      'Collaborative research project with individual technical and research contributions (group of four).',
+      'Individual contribution to be documented explicitly as the project progresses.',
+    ],
+  },
   {
     id: 'ibiz',
     role: 'Software Engineering Intern',
@@ -43,9 +65,10 @@ export const experience = [
     period: '2023 — Present',
     location: 'Nairobi, Kenya',
     responsibilities: [
-      'Support computer science and information technology laboratory sessions for undergraduate students.',
-      'Maintain lab infrastructure, troubleshoot hardware and software issues, and ensure smooth learning environments.',
-      'Assist faculty with practical exercises in programming, databases, and systems administration.',
+      'Troubleshoot network, hardware, and software issues to keep laboratory sessions running.',
+      'Install and configure operating systems, software, and development tools on lab machines.',
+      'Perform routine computer maintenance, updates, and repairs across the laboratory.',
+      'Coordinate laboratory setup and support lecturers during practical classes.',
       'Guide students through debugging workflows and best practices in software development.',
     ],
   },
@@ -66,43 +89,94 @@ export const experience = [
 
 export const skillCategories = [
   {
-    name: 'Languages',
-    skills: ['Python', 'PHP', 'JavaScript', 'TypeScript'],
-    icon: 'code',
-  },
-  {
-    name: 'Frontend',
-    skills: ['Vue', 'React', 'Next.js', 'HTML', 'CSS'],
-    icon: 'layout',
-  },
-  {
-    name: 'Backend',
-    skills: ['Laravel', 'Django', 'Supabase'],
-    icon: 'server',
-  },
-  {
-    name: 'Databases',
-    skills: ['MySQL', 'PostgreSQL', 'Supabase'],
-    icon: 'database',
-  },
-  {
     name: 'AI & Data',
-    skills: ['Python', 'Prompt Engineering', 'Data Analytics'],
+    skills: [
+      'Python',
+      'Data Science',
+      'RAG',
+      'LLM Applications',
+      'Pandas',
+      'NumPy',
+      'Data Visualization',
+      'Prompt Engineering',
+    ],
     icon: 'brain',
   },
   {
-    name: 'Blockchain',
-    skills: ['Solidity (Learning)'],
-    icon: 'link',
+    name: 'Backend',
+    skills: ['FastAPI', 'Django', 'Laravel', 'Node.js', 'REST APIs'],
+    icon: 'server',
+  },
+  {
+    name: 'Frontend',
+    skills: ['React', 'Vue', 'Next.js', 'TypeScript', 'JavaScript', 'Tailwind CSS'],
+    icon: 'layout',
+  },
+  {
+    name: 'Databases',
+    skills: ['PostgreSQL', 'MySQL', 'SQL', 'MongoDB', 'Redis', 'Supabase'],
+    icon: 'database',
+  },
+  {
+    name: 'Networking',
+    skills: ['Cisco Networking', 'Network Troubleshooting'],
+    icon: 'wifi',
   },
   {
     name: 'Tools',
-    skills: ['Git', 'GitHub', 'REST APIs'],
+    skills: ['Git', 'GitHub', 'Docker', 'Linux', 'VS Code'],
     icon: 'wrench',
   },
 ]
 
-export const projects = [
+export const education = {
+  degree: 'Bachelor of Business Information Technology (BBIT)',
+  institution: 'Strathmore University',
+  location: 'Nairobi, Kenya',
+  status: 'Final Year',
+  expectedCompletion: 'December 2026',
+  graduation: 'June 2027',
+  academicStanding: {
+    label: 'Expected academic standing',
+    gpa: '3.33',
+    classification: 'Second Class Upper',
+    grade: 'B',
+  },
+}
+
+export const researchPreparation = [
+  {
+    name: 'IS Project I',
+    creditHours: '6 credit hours',
+    note: 'Stage one of the two-stage undergraduate project sequence (collaborative group project).',
+  },
+  {
+    name: 'Research Methodology and Technical Writing',
+    creditHours: '3 credit hours',
+    note: 'Formal training in research methods and academic/technical writing.',
+  },
+  {
+    name: 'IS Project II',
+    creditHours: '12 credit hours',
+    note: 'Stage two: development and evaluation of the project artifact (collaborative group project).',
+  },
+]
+
+export const researchPreparationTotal =
+  '18 project credit hours + 3 credit hours of methodology training'
+
+export const courseworkNote =
+  'AI and Data Science coursework undertaken within the BBIT programme, alongside independent study in machine learning, retrieval-augmented generation, and data analysis.'
+
+export const certifications = [
+  { issuer: 'Cisco', name: 'CCNA Switching, Routing, and Wireless Essentials' },
+  { issuer: 'Cisco', name: 'Introduction to Data Science' },
+  { issuer: 'HP LIFE', name: 'Data Science & Analytics' },
+  { issuer: 'HP LIFE', name: 'Presenting Data' },
+  { issuer: 'EF SET', name: 'EF SET 63/100 — C1 Advanced' },
+]
+
+const projectList = [
   {
     id: 'libticket',
     name: 'LibTicket',
@@ -144,19 +218,20 @@ export const projects = [
   {
     id: 'libai',
     name: 'LibAI',
-    status: 'In Development',
-    statusColor: 'amber',
-    stack: ['React', 'Python', 'AI'],
-    tagline: 'AI-powered tutoring aligned with the Liberian curriculum',
+    status: 'Undergraduate Research',
+    statusColor: 'violet',
+    researchPath: '/research/libai',
+    stack: ['RAG', 'Python', 'React', 'AI'],
+    tagline: 'Trustworthy curriculum-aware RAG for educational question answering',
     problem:
       'Students in Liberia face limited access to quality tutoring resources aligned with the national school curriculum, widening educational gaps in underserved communities.',
     solution:
-      'LibAI is an AI-powered tutoring platform trained specifically on the Liberian school curriculum to deliver personalized learning support, adaptive exercises, and interactive educational experiences.',
+      'LibAI is a research-oriented RAG platform investigating how curriculum-aware retrieval, evidence grounding, answerability, and verification can improve the reliability of LLM-generated educational answers in resource-constrained environments.',
     features: [
-      'Curriculum-aware AI',
-      'Student Dashboard',
-      'Interactive Tutoring',
-      'Future Voice Support',
+      'Curriculum-aware retrieval',
+      'Evidence grounding & attribution',
+      'Answerability & abstention',
+      'LLM evaluation framework',
     ],
     github: 'https://github.com/masonstephen',
     liveDemo: null,
@@ -260,12 +335,12 @@ export const projects = [
     name: 'DataViz',
     status: 'Live',
     statusColor: 'emerald',
-    stack: ['React', 'Vite', 'Tailwind CSS', 'AI', 'JavaScript'],
-    tagline: 'Free AI-powered chart builder and dashboard editor',
+    stack: ['Python', 'FastAPI', 'Pandas', 'NumPy', 'PostgreSQL', 'React', 'AI'],
+    tagline: 'AI-powered data analysis & visualization platform',
     problem:
       'Business analysts, researchers, and students struggle to build quick, custom charts and dashboards from raw dataset uploads. Traditional tools have steep learning curves, while custom coding is slow and complex.',
     solution:
-      'DataViz is an AI-powered chart builder that allows users to upload Excel/CSV data and write natural language instructions to auto-generate from 30+ interactive chart types. Dashboards can be customized and exported instantly as PDFs.',
+      'DataViz is a full-stack platform for exploring datasets through automated visualization, natural-language interaction, and AI-assisted analysis. Users upload Excel/CSV data and write natural language instructions to auto-generate from 30+ interactive chart types; dashboards can be customized and exported instantly as PDFs.',
     features: [
       'AI Chart Suggestion',
       '30+ Interactive Chart Types',
@@ -292,10 +367,18 @@ export const projects = [
       'Automated insights showing data anomalies and trend highlights.',
     ],
     architecture:
-      'React Web SPA (Vite) → Client-Side Charting Engine (ECharts/Recharts) → OpenAI/Gemini Serverless API → Lemon Squeezy Payment Webhooks.',
+      'React Web SPA (Vite) → Python API (FastAPI) with Pandas/NumPy data processing → PostgreSQL → client-side charting engine (ECharts/Recharts) → LLM-assisted analysis → Lemon Squeezy payment webhooks.',
   },
 ]
 
+// Preferred hierarchy: research-first, then strongest data/software projects.
+const projectOrder = ['libai', 'dataviz', 'ulconnect', 'libticket', 'libland']
+
+export const projects = projectOrder
+  .map((id) => projectList.find((p) => p.id === id))
+  .filter(Boolean)
+  .concat(projectList.filter((p) => !projectOrder.includes(p.id)))
+
 export function getProjectById(id) {
-  return projects.find((p) => p.id === id)
+  return projectList.find((p) => p.id === id)
 }
