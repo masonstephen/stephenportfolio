@@ -6,7 +6,7 @@ export const personalInfo = {
   statement:
     'I build and study trustworthy AI systems for real-world environments, with a focus on retrieval-augmented generation, evidence-grounded question answering, data systems, and resource-constrained applications.',
   supportingLine:
-    'Final-year Bachelor of Business Information Technology student at Strathmore University, researching curriculum-aware RAG for educational question answering.',
+    'Final-year Bachelor of Business Information Technology student at Strathmore University, and independent researcher in curriculum-aware RAG for educational question answering.',
   subtitle:
     'Software Engineer specializing in Digital Products, Artificial Intelligence, Blockchain Technology, and Digital Innovation.',
   email: 'masonstephen606@gmail.com',
@@ -32,17 +32,30 @@ export const interests = [
 
 export const experience = [
   {
-    id: 'undergrad-research',
-    role: 'Undergraduate Information Systems Research',
+    id: 'independent-research',
+    role: 'Independent AI Researcher',
+    company: 'Independent Research & Development',
+    period: 'Ongoing',
+    location: 'Self-directed',
+    responsibilities: [
+      'Independent research project (not a university final-year project or group project): LibAI, a trustworthy curriculum-aware RAG platform for educational question answering.',
+      'Research focus: curriculum-aware retrieval, evidence grounding, answerability, abstention, and evaluation of LLM-based educational answers.',
+      'Designed the research architecture, knowledge-base schema, and evaluation framework documented on the Research pages of this site.',
+      'Ongoing work — no completed experimental results or benchmarks are claimed at this stage.',
+    ],
+  },
+  {
+    id: 'final-year-project',
+    role: 'Final-Year Information Systems Research',
     company: 'Strathmore University',
     period: 'Ongoing',
     location: 'Nairobi, Kenya',
     responsibilities: [
-      'Collaborative two-stage undergraduate research project conducted through IS Project I and IS Project II, supported by Research Methodology and Technical Writing.',
-      'Research focus: curriculum-aware retrieval-augmented generation for trustworthy educational question answering.',
-      'Designed the LibAI research project around curriculum knowledge organization, retrieval, evidence grounding, answerability, and evaluation.',
-      'Collaborative research project with individual technical and research contributions (group of four).',
-      'Individual contribution to be documented explicitly as the project progresses.',
+      'Collaborative final-year Information Systems project (group of four) undertaken through IS Project I and IS Project II, supported by Research Methodology and Technical Writing.',
+      'Gitaru Market Linkage Initiative — investigating market-access challenges faced by smallholder farmers at Gitaru Market, Kiambu County, and ways to improve direct linkages with institutional and bulk buyers.',
+      'Applied Design Thinking and Participatory Action Research with stakeholder engagement; farmer cooperatives selected as the preferred solution concept.',
+      'Project presentation scheduled for 25 November 2026 as part of the requirements for the Bachelor of Business Information Technology.',
+      'Collaborative project — group of four; individual contribution to be documented explicitly as the project progresses.',
     ],
   },
   {
@@ -218,7 +231,7 @@ const projectList = [
   {
     id: 'libai',
     name: 'LibAI',
-    status: 'Undergraduate Research',
+    status: 'Independent AI Research',
     statusColor: 'violet',
     researchPath: '/research/libai',
     stack: ['RAG', 'Python', 'React', 'AI'],
@@ -226,7 +239,7 @@ const projectList = [
     problem:
       'Students in Liberia face limited access to quality tutoring resources aligned with the national school curriculum, widening educational gaps in underserved communities.',
     solution:
-      'LibAI is a research-oriented RAG platform investigating how curriculum-aware retrieval, evidence grounding, answerability, and verification can improve the reliability of LLM-generated educational answers in resource-constrained environments.',
+      'An independent research and development project investigating how curriculum-aware retrieval, evidence grounding, answerability, and verification can improve the reliability of LLM-generated educational answers in resource-constrained environments.',
     features: [
       'Curriculum-aware retrieval',
       'Evidence grounding & attribution',
@@ -369,10 +382,50 @@ const projectList = [
     architecture:
       'React Web SPA (Vite) → Python API (FastAPI) with Pandas/NumPy data processing → PostgreSQL → client-side charting engine (ECharts/Recharts) → LLM-assisted analysis → Lemon Squeezy payment webhooks.',
   },
+  {
+    id: 'gitaru',
+    name: 'Gitaru Market Linkage Initiative',
+    status: 'Final-Year Academic Project',
+    statusColor: 'violet',
+    detailsPath: '/research#gitaru',
+    stack: ['Design Thinking', 'Participatory Action Research', 'Field Research', 'Stakeholder Engagement'],
+    tagline: 'Connecting farmers to direct buyers for sustainable livelihoods',
+    problem:
+      'Smallholder farmers struggle to access reliable markets because they cannot consistently meet quality, volume, licensing, and logistics requirements, forcing them to depend on middlemen who capture most of the value.',
+    solution:
+      'A collaborative final-year Information Systems project investigating challenges faced by smallholder farmers at Gitaru Market in Kiambu County, Kenya, and exploring ways to improve direct market linkages between farmers and institutional/bulk buyers. Farmer cooperatives is the selected solution concept.',
+    features: [
+      'Design Thinking process',
+      'Participatory Action Research',
+      'Stakeholder engagement',
+      'Selected concept: farmer cooperatives',
+    ],
+    liveDemo: null,
+    challenges: [
+      'Unpredictable buyer demand and dependence on intermediaries.',
+      'Limited timely market information for farmers.',
+      'Transportation and inadequate storage challenges.',
+      'Perishability of crops and limited bargaining power.',
+      'Mismatch between production and market demand.',
+    ],
+    lessonsLearned: [
+      'Farmers, institutional buyers, and agricultural officers each play a distinct role in market linkage systems.',
+      'Design Thinking with Participatory Action Research keeps stakeholders as contributors to the solution process.',
+      'Concept selection was evaluated against feasibility, stakeholder acceptability, income impact, and cost efficiency.',
+    ],
+    futureImprovements: [
+      'Testing and validation of the proposed solution with relevant stakeholders.',
+      'Project presentation scheduled for 25 November 2026.',
+      'Prototyping the farmer cooperatives concept beyond the proposal stage.',
+    ],
+    architecture:
+      'Design Thinking (Empathy → Define → Ideate → Prototyping → Testing) integrated with Participatory Action Research, using interviews, questionnaires, field observations, and stakeholder engagement.',
+  },
 ]
 
-// Preferred hierarchy: research-first, then strongest data/software projects.
-const projectOrder = ['libai', 'dataviz', 'ulconnect', 'libticket', 'libland']
+// Preferred hierarchy: independent research first, strongest data/software work,
+// then the formal final-year academic project.
+const projectOrder = ['libai', 'dataviz', 'gitaru', 'ulconnect', 'libticket', 'libland']
 
 export const projects = projectOrder
   .map((id) => projectList.find((p) => p.id === id))

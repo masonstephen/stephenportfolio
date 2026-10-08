@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from 'vue'
-import { useRoute, RouterLink } from 'vue-router'
+import { useRoute, useRouter, RouterLink } from 'vue-router'
 import {
   ArrowLeft,
   Github,
@@ -16,7 +16,15 @@ import Footer from '@/components/Footer.vue'
 import { getProjectById } from '@/data/portfolio'
 
 const route = useRoute()
+const router = useRouter()
 const project = computed(() => getProjectById(route.params.id))
+
+// Some projects have a canonical page elsewhere on this site (e.g. the
+// final-year academic project lives in the Academic Research section of
+// /research). Redirect there instead of rendering this template.
+if (project.value?.detailsPath) {
+  router.replace(project.value.detailsPath)
+}
 
 const statusStyles = {
   amber: 'badge-primary',

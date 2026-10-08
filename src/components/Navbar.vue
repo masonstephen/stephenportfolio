@@ -13,11 +13,17 @@ const isOnHero = computed(() => route.path === '/' && !isScrolled.value)
 
 const navLinks = [
   { label: 'Home', href: '/#home' },
+  { label: 'Research', href: '/research' },
   { label: 'Projects', href: '/#projects' },
   { label: 'Experience', href: '/#experience' },
   { label: 'Skills', href: '/#skills' },
   { label: 'Contact', href: '/#contact' },
 ]
+
+function isActive(href) {
+  if (href === '/research') return route.path.startsWith('/research')
+  return false
+}
 
 function handleScroll() {
   isScrolled.value = window.scrollY > 20
@@ -54,15 +60,18 @@ onUnmounted(() => {
       </RouterLink>
 
       <div class="hidden items-center md:flex">
-        <a
+        <RouterLink
           v-for="link in navLinks"
           :key="link.href"
-          :href="link.href"
+          :to="link.href"
           class="nav-link"
-          :class="isOnHero && !isScrolled ? '!text-white/70 hover:!text-white' : ''"
+          :class="[
+            isOnHero && !isScrolled ? '!text-white/70 hover:!text-white' : '',
+            isActive(link.href) && !(isOnHero && !isScrolled) ? 'nav-link-active' : '',
+          ]"
         >
           {{ link.label }}
-        </a>
+        </RouterLink>
         <ThemeToggle class="ml-2" :on-hero="isOnHero && !isScrolled" />
         <RouterLink to="/resume" class="btn-primary ml-4 !h-10 !px-6 !text-body">
           <FileText class="h-4 w-4" aria-hidden="true" />
@@ -84,19 +93,18 @@ onUnmounted(() => {
           <Menu v-else class="h-5 w-5" />
         </button>
       </div>
-    </nav>
-
-    <div v-if="isMobileOpen" class="mobile-menu md:hidden">
+    </nav>      <div v-if="isMobileOpen" class="mobile-menu md:hidden">
       <div class="section-container flex flex-col py-4">
-        <a
+        <RouterLink
           v-for="link in navLinks"
           :key="link.href"
-          :href="link.href"
+          :to="link.href"
           class="nav-link !leading-normal py-3"
+          :class="isActive(link.href) ? 'nav-link-active' : ''"
           @click="closeMobile"
         >
           {{ link.label }}
-        </a>
+        </RouterLink>
         <RouterLink
           to="/resume"
           class="btn-primary mt-4 w-full justify-center"

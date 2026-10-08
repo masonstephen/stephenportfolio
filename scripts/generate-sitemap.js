@@ -18,6 +18,8 @@ const today = new Date().toISOString().split('T')[0]
 const urls = [
   { loc: '/', priority: '1.0', changefreq: 'weekly' },
   { loc: '/resume', priority: '0.8', changefreq: 'monthly' },
+  { loc: '/research', priority: '0.9', changefreq: 'monthly' },
+  { loc: '/research/libai', priority: '0.8', changefreq: 'monthly' },
   ...projects.map((p) => ({
     loc: `/projects/${p.id}`,
     priority: '0.7',

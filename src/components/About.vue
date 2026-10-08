@@ -32,6 +32,13 @@ import { interests } from '@/data/portfolio'
               scalable, accessible, and purpose-built for the contexts they serve.
             </p>
             <p class="mt-4 text-body-lg leading-6 text-body">
+              My academic experience includes collaborative research through my final-year
+              Information Systems project — the <strong class="font-medium text-heading">Gitaru Market Linkage Initiative</strong>,
+              undertaken with a group of four — while my independent research work includes
+              <strong class="font-medium text-heading">LibAI</strong>, a project investigating
+              trustworthy curriculum-aware RAG for educational question answering.
+            </p>
+            <p class="mt-4 text-body-lg leading-6 text-body">
               I am passionate about building technology that doesn't just work — it empowers. Whether
               developing AI tutoring platforms for Liberian students or researching blockchain land
               registries, my focus remains on creating digital solutions that drive meaningful impact

@@ -194,6 +194,22 @@ export function updatePageSeo(to) {
       type: 'profile',
       path: '/resume',
     }
+  } else if (to.name === 'Research') {
+    seo = {
+      title: 'Research | Stephen Mason',
+      description:
+        'Research interests and projects in trustworthy AI, retrieval-augmented generation, information retrieval, evidence-grounded question answering, and educational AI — spanning independent research (LibAI) and academic research.',
+      type: 'website',
+      path: '/research',
+    }
+  } else if (to.name === 'ResearchLibAI') {
+    seo = {
+      title: 'LibAI | Trustworthy Curriculum-Aware RAG | Stephen Mason',
+      description:
+        'Independent research investigating curriculum-aware retrieval, evidence grounding, answerability, verification, and evaluation for educational question answering.',
+      type: 'article',
+      path: '/research/libai',
+    }
   } else if (to.name === 'ProjectDetails') {
     const project = getProjectById(to.params.id)
     const projectSeo = getProjectSeo(project)
@@ -220,6 +236,23 @@ export function updatePageSeo(to) {
         ])
       )
     }
+  } else if (to.name === 'Research') {
+    upsertJsonLd(
+      'breadcrumbs',
+      buildBreadcrumbSchema([
+        { name: 'Home', path: '/' },
+        { name: 'Research', path: '/research' },
+      ])
+    )
+  } else if (to.name === 'ResearchLibAI') {
+    upsertJsonLd(
+      'breadcrumbs',
+      buildBreadcrumbSchema([
+        { name: 'Home', path: '/' },
+        { name: 'Research', path: '/research' },
+        { name: 'LibAI', path: '/research/libai' },
+      ])
+    )
   } else {
     document.head.querySelector('script[data-seo-jsonld="breadcrumbs"]')?.remove()
   }
@@ -231,11 +264,17 @@ export function getSitemapEntries() {
   return [
     { loc: '/', priority: '1.0', changefreq: 'weekly', lastmod: today },
     { loc: '/resume', priority: '0.8', changefreq: 'monthly', lastmod: today },
-    ...projects.map((project) => ({
-      loc: `/projects/${project.id}`,
-      priority: '0.7',
-      changefreq: 'monthly',
-      lastmod: today,
-    })),
+    { loc: '/research', priority: '0.9', changefreq: 'monthly', lastmod: today },
+    { loc: '/research/libai', priority: '0.8', changefreq: 'monthly', lastmod: today },
+    ...projects
+      // Projects with a canonical page elsewhere (e.g. the final-year academic
+      // project, which lives in /research) are excluded from project URLs.
+      .filter((project) => !project.detailsPath)
+      .map((project) => ({
+        loc: `/projects/${project.id}`,
+        priority: '0.7',
+        changefreq: 'monthly',
+        lastmod: today,
+      })),
   ]
 }

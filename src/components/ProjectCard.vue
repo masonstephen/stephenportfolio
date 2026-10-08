@@ -61,7 +61,7 @@ const statusStyles = {
 
     <div class="mt-6 flex flex-wrap gap-2 border-t border-surface-border pt-5">
       <RouterLink
-        :to="`/projects/${project.id}`"
+        :to="project.detailsPath || `/projects/${project.id}`"
         class="btn-primary group/btn !h-10 !px-6 !text-body"
       >
         View Details
@@ -69,6 +69,13 @@ const statusStyles = {
           class="h-3 w-3 transition-transform group-hover/btn:translate-x-0.5"
           aria-hidden="true"
         />
+      </RouterLink>
+      <RouterLink
+        v-if="project.researchPath"
+        :to="project.researchPath"
+        class="btn-secondary !h-10 !px-6 !text-body"
+      >
+        Research
       </RouterLink>
       <a
         v-if="project.github"

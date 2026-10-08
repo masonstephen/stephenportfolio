@@ -15,6 +15,16 @@ const router = createRouter({
       component: () => import('@/pages/Resume.vue'),
     },
     {
+      path: '/research',
+      name: 'Research',
+      component: () => import('@/pages/Research.vue'),
+    },
+    {
+      path: '/research/libai',
+      name: 'ResearchLibAI',
+      component: () => import('@/pages/LibAIResearch.vue'),
+    },
+    {
       path: '/projects/:id',
       name: 'ProjectDetails',
       component: () => import('@/pages/ProjectDetails.vue'),

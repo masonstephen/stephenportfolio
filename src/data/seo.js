@@ -17,6 +17,7 @@ export const siteConfig = {
     'iBiz Africa',
     'LibTicket',
     'LibAI',
+    'Gitaru Market Linkage Initiative',
     'LibLand',
     'ULConnect',
     'DataViz',
